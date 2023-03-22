@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- HTML code goes in here -->
+<center>
+   <h1>
+   Pick A Card
+  </h1>
+</center>
+<!-- <form action="card1" method="get">
+  <input type="submit" value="Card1">
+</form>
+
+<form action="card2" method="get">
+  <input type="submit" value="Card2">
+</form>
+
+<form action="card3" method="get">
+  <input type="submit" value="Card3">
+</form>
+
+<form action="card4" method="get">
+  <input type="submit" value="Card4">
+</form> -->
+
+<!-- <form action="play" method="post">
+  {% for val in values %}
+  <input type="submit" value="Card {{loop.index}}" name="button.{{val}}" >
+  {% endfor %}
+</form> -->
+
+<!-- INFO this works with images as buttons but they wont disapear when you get a match but it does display the number.  -->
+<center>
+  <form action="play" method="post">
+    {% for val in values %}
+    <button type="submit" value="Card {{loop.index}}" name="button.{{val}}" >
+      <img src="static/fruit/{{session['current']}}.png" alt="buttonpng" border="0" />
+    </button>
+    {% endfor %}
+  </form>
+</center>
+
+<!-- <img src="static/fruit/{{session['current']}}.png" alt="buttonpng" border="0" /> -->
+
+{{session['current']}}
+
+
+{% endblock %}

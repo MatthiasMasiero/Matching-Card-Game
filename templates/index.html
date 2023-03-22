@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- HTML code goes in here -->
+<center>
+   <h1>
+   Shuffle The Deck
+  </h1>
+  
+<form action="start" method="get">
+  <input type="submit" value="Start Game">
+</form>
+  
+</center>
+<!-- <form action="card1" method="get">
+  <input type="submit" value="Card1">
+</form> -->
+{{cards}}
+
+
+{% endblock %}
